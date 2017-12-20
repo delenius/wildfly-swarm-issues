@@ -1,4 +1,4 @@
-package com.arqcdi;
+package com.arqcdi.model;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
@@ -10,17 +10,10 @@ import javax.inject.Inject;
 @ApplicationScoped
 public class HelloApp {
 
-    @Inject
-    private Foo foo;
-
     public HelloApp() {}
 
     public String hello() {
         return "Hello world!";
-    }
-
-    public String foo() {
-        return foo.foo();
     }
 
 }

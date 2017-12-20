@@ -1,0 +1,28 @@
+swarm:
+  bind:
+    address: 127.0.0.1
+  datasources:
+    data-sources:
+      flora-ds:
+        driver-name: myh2
+        connection-url: jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+        user-name: sa
+        password: sa
+    jdbc-drivers:
+      myh2:
+        driver-class-name: org.h2.Driver
+        xa-datasource-name: org.h2.jdbcx.JdbcDataSource
+        driver-module-name: com.h2database.h2
+
+java:
+  net:
+    preferIPv4Stack: true
+
+engine:
+  xsb: /opt/xsb-src/XSB/config/x86_64-unknown-linux-gnu/bin/xsb
+  flora-dir: /opt/flora2
+  sessions-dir: /opt/sessions
+  flora-upload-dir: /opt/ontology-source
+
+consul:
+  host: 127.0.0.1

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+  <!-- Used at testing time. Always recreate DB -->
+  <persistence-unit name="flora" transaction-type="JTA">
+    <jta-data-source>java:jboss/datasources/flora-ds</jta-data-source>
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.schema-generation.scripts.action" value="drop-and-create"/>
+      <property name="javax.persistence.schema-generation.scripts.create-target" value="create-tables.ddl"/>
+      <property name="javax.persistence.schema-generation.scripts.drop-target" value="drop-tables.ddl"/>
+    <!--
+      <property name="javax.persistence.database-product-name" value="MySQL"/>
+      <property name="javax.persistence.database-major-version" value="5"/>
+      <property name="javax.persistence.database-minor-version" value="1"/>
+      -->
+      <property name="hibernate.enable_lazy_load_no_trans" value="true"/>
+      <property name="hibernate.hbm2ddl.auto" value="create"/>
+    </properties>
+  </persistence-unit>
+
+  <!--
+  <persistence-unit name="flora-recreate" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/floradocdb" />
+      <property name="javax.persistence.jdbc.user" value="florauser" />
+      <property name="javax.persistence.jdbc.password" value="florapass" />
+      <property name="hibernate.hbm2ddl.auto" value="create"/>
+    </properties>
+  </persistence-unit>
+  -->
+
+</persistence>

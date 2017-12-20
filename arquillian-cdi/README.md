@@ -2,10 +2,9 @@
 
 To reproduce, run `mvn test`.
 
-I have tried many different variants, like
+The problem occurs because `@DefaultDeployment` does not include
+classes in other packages, so injecting `HelloApp` from `HelloResource`
+fails.
 
-- `@DefaultDeployment(type = DefaultDeployment.Type.WAR)`
-- `@DefaultDeployment(type = DefaultDeployment.Type.JAR)`
-- Not using default deployment, and manually building an archive
-
-but these all run into other problems
+It does package *sub-packages*, so it works if the `model` package
+is moved inside the `rest` package.

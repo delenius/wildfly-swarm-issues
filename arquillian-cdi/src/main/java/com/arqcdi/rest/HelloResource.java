@@ -1,4 +1,6 @@
-package com.arqcdi;
+package com.arqcdi.rest;
+
+import com.arqcdi.model.HelloApp;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -16,13 +18,6 @@ public class HelloResource {
     @Produces({MediaType.TEXT_PLAIN})
     public String getGreeting(){
         return app.hello();
-    }
-
-    @GET
-    @Path("/foo")
-    @Produces({MediaType.TEXT_PLAIN})
-    public String getFoo(){
-        return app.foo();
     }
 
 }

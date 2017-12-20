@@ -1,4 +1,4 @@
-package com.arqcdi;
+package com.arqcdi.rest;
 
 import org.jboss.arquillian.junit.Arquillian;
 import org.junit.Test;
@@ -8,7 +8,7 @@ import javax.inject.Inject;
 
 
 @RunWith(Arquillian.class)
-@DefaultDeployment //(type = DefaultDeployment.Type.WAR)
+@DefaultDeployment
 public class HelloResourceTest {
 
     @Inject
@@ -17,11 +17,6 @@ public class HelloResourceTest {
     @Test
     public void testGreeting() {
         System.out.println(helloResource.getGreeting());
-    }
-
-    @Test
-    public void testFoo() {
-        System.out.println(helloResource.getFoo());
     }
 
 }

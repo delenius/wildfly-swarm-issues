@@ -11,6 +11,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <version.wildfly-swarm>2017.12.1</version.wildfly-swarm>
         <version.arquillian>1.1.15.Final</version.arquillian>
+        <version.h2>1.4.187</version.h2>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <failOnMissingWebXml>false</failOnMissingWebXml>
@@ -103,12 +104,6 @@
             <groupId>org.wildfly.swarm</groupId>
             <artifactId>arquillian</artifactId>
             <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>2.4</version>
         </dependency>
 
     </dependencies>
