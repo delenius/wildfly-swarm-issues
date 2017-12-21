@@ -2,16 +2,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.sri</groupId>
-    <artifactId>arquillian-cdi</artifactId>
+    <artifactId>arquillian-lists</artifactId>
     <packaging>war</packaging>
     <version>0.0.1</version>
-    <name>arquillian-cdi</name>
+    <name>arquillian-lists</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <version.wildfly-swarm>2017.12.1</version.wildfly-swarm>
-        <version.arquillian>1.1.15.Final</version.arquillian>
-        <version.h2>1.4.187</version.h2>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <failOnMissingWebXml>false</failOnMissingWebXml>
@@ -56,6 +54,10 @@
         <dependency>
             <groupId>org.wildfly.swarm</groupId>
             <artifactId>jaxrs-jaxb</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.wildfly.swarm</groupId>
+            <artifactId>jaxrs-multipart</artifactId>
         </dependency>
         <dependency>
             <groupId>org.wildfly.swarm</groupId>
