@@ -20,4 +20,4 @@ produces errors. The version without the resteasy jar file does not
 produce errors.
 
 This is relevant because these dependencies are needed to fix
-SWARM-1750.
+[SWARM-1750](https://issues.jboss.org/browse/SWARM-1750).
