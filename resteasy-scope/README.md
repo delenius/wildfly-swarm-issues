@@ -2,14 +2,14 @@
 
 Run `mvn package`
 
-Run `jar -tf target/resteasy-scope.war | grep resteasy`
+Run `jar -tf target/resteasy-scope.war | grep resteasy` and note the output.
 
 Comment out the two resteasy test dependencies in `pom.xml`, and
 run `mvn clean; mvn package`.
 
-Once again, run `jar -tf target/resteasy-scope.war | grep resteasy`
+Once again, run `jar -tf target/resteasy-scope.war | grep resteasy`.
 
-In one case, the war file contains resteasy-jaxrs-3.0.19.Final.jar,
+In one case, the war file contains `resteasy-jaxrs-3.0.19.Final.jar`,
 in the other case not.
 
 Running the version with the resteasy jar file in it,
