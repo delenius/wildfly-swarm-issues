@@ -1,12 +1,14 @@
 package org.example;
 
-import javax.inject.Inject;
+import io.swagger.annotations.Api;
+
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 import java.util.Arrays;
 import java.util.List;
 
 
+@Api(value = "Swagger Example")
 @Path("/")
 public class HelloResource {
 
