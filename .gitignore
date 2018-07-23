@@ -2,3 +2,4 @@
 .idea
 audit.log
 target
+.DS_Store
