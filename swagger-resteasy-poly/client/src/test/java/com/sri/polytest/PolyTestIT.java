@@ -1,5 +1,6 @@
 package com.sri.polytest;
 
+import com.fasterxml.jackson.databind.SerializationFeature;
 import junit.framework.Assert;
 import org.apache.log4j.Logger;
 import org.junit.BeforeClass;
@@ -24,6 +25,7 @@ public class PolyTestIT {
     public static void initialize() {
         ApiClient apiClient = new ApiClient();
         apiClient.setBasePath("http://localhost:8080");
+        apiClient.getJSON().getContext(Object.class).disable(SerializationFeature.FAIL_ON_EMPTY_BEANS);
         server = new PolyPetsApi(apiClient);
     }
 

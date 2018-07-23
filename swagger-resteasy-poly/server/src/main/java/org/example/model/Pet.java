@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiModel;
 @JsonTypeInfo(
         use = JsonTypeInfo.Id.NAME,
         include = JsonTypeInfo.As.PROPERTY,
-        property = "typeDiscriminator")
+        property = "type")
 @JsonSubTypes({
         @JsonSubTypes.Type(value = Cat.class),
         @JsonSubTypes.Type(value = Dog.class)
